@@ -49,14 +49,17 @@
     height: auto;
   }
 
-  ul.dashed {
-    list-style: none; 
-    padding-left: 20px; 
+  ul.dashed li {
+    list-style: none;        
+    position: relative;      
+    padding-left: 1.2em;   
   }
-
+  
   ul.dashed li::before {
-    content: "– ";      
-    color: rgb(4,234,4); 
+    content: "–";          
+    position: absolute;
+    left: 0;               
+    color: rgb(4,234,4);      
   }
 
   
