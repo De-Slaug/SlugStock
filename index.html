@@ -22,23 +22,23 @@
 
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr; /* 2 normal columns + 1 wide column */
+    grid-template-columns: 1fr 1fr 2fr; /* 2 normal cols + 1 wide col */
+    grid-template-rows: auto auto;      /* 2 rows */
     width: 50%;
     margin: 20px auto;
-    border: 2px solid rgb(4,234,4); /* outer border */
-    border-collapse: collapse;
+    border: 2px solid rgb(4,234,4);     /* full frame */
   }
 
   .grid-item {
-  border: 2px solid rgb(4,234,4);
+    border: 1px solid rgb(4,234,4);     /* internal cell borders */
     padding: 20px;
     color: rgb(4,234,4);
     font-family: 'Roboto', sans-serif;
     text-align: center;
   }
 
-  .grid-item.no-border {
-    border-right: none; /* removes the far-right line */
+  .big-box {
+    grid-row: span 2;  /* stretches down across both rows */
   }
   
 </style>
@@ -86,10 +86,9 @@
 <div class="grid-container">
   <div class="grid-item">Box 1</div>
   <div class="grid-item">Box 2</div>
-  <div class="grid-item no-border">Big Box (stretched)</div>
+  <div class="grid-item big-box">Big Rectangle</div>
   <div class="grid-item">Box 4</div>
   <div class="grid-item">Box 5</div>
-  <div class="grid-item no-border">Big Box (stretched)</div>
 </div>
 
 </body>
