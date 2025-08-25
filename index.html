@@ -19,6 +19,28 @@
     text-align: center;
     text-shadow: 0.1em 0 black, 0 0.1em black, -0.1em 0 black, 0 -0.1em black, -0.1em -0.1em black, -0.1em 0.1em black, 0.1em -0.1em black, 0.1em 0.1em black;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr; /* 2 normal columns + 1 wide column */
+    width: 50%;
+    margin: 20px auto;
+    border: 2px solid rgb(4,234,4); /* outer border */
+    border-collapse: collapse;
+  }
+
+  .grid-item {
+  border: 2px solid rgb(4,234,4);
+    padding: 20px;
+    color: rgb(4,234,4);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+
+  .grid-item.no-border {
+    border-right: none; /* removes the far-right line */
+  }
+  
 </style>
 </head>
 <body>
@@ -60,7 +82,16 @@
 <p class = "dashed center" style = "color: rgb(4,234,4); width: 50%; margin: 0 auto;"> So here's a short introduction / synopsis or whatever ! I wasn't really <i> alive </i> back when people on the internet had their own websites where they had complete freedom to indulge in whatever gobbledygook they wanted, 
   but I feel like that notion is really fun and interesting. A creative space to upload whatever you want, or decorate as you please without being limited by what meager customization options exist on social media today ! It's like a really novel idea, 
   and I'd like to give it a shot even if I don't know much about how websites work. Whatever the case, I'm gonna try my best to have fun with this ! I'll try and upload my toys and knick-knacks or projects and whatnot onto here. </p>
-  
+
+<div class="grid-container">
+  <div class="grid-item">Box 1</div>
+  <div class="grid-item">Box 2</div>
+  <div class="grid-item no-border">Big Box (stretched)</div>
+  <div class="grid-item">Box 4</div>
+  <div class="grid-item">Box 5</div>
+  <div class="grid-item no-border">Big Box (stretched)</div>
+</div>
+
 </body>
 </html>
 
