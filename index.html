@@ -41,6 +41,17 @@
   .big-box {
     grid-row: span 2; 
   }
+
+  ul.dashed {
+    list-style: none; 
+    padding-left: 20px; 
+  }
+
+  ul.dashed li::before {
+    content: "– ";      
+    color: rgb(4,234,4); 
+  }
+
   
 </style>
 </head>
@@ -85,7 +96,9 @@
   and I'd like to give it a shot even if I don't know much about how websites work. Whatever the case, I'm gonna try my best to have fun with this ! I'll try and upload my toys and knick-knacks or projects and whatnot onto here. </p>
 
 <div class="grid-container">
-  <div class="grid-item">Box 1</div>
+  <div class="grid-item">
+    <span style="font-size: 1.25em; font-weight: 500;">New Stuff</span>
+  </div>
   <div class="grid-item"> 
     <span style="font-size: 1.25em; font-weight: 500;">Interests !</span>
     <ul class="dashed" style="margin-top: 5px; padding-left: 20px;">
@@ -103,8 +116,12 @@
     <br>
     <img src="images/shin_godzilla.jpg" alt="Shin Godzilla" style="max-width:100%; height:auto; margin-top:10px;">
   </div>
-  <div class="grid-item">Box 4</div>
-  <div class="grid-item">Box 5</div>
+  <div class="grid-item">
+    <span style="font-size: 1.25em; font-weight: 500;">Animals</span>
+  </div>
+  <div class="grid-item">
+    <span style="font-size: 1.25em; font-weight: 500;">The Wonderful Capuchin...</span>
+  </div>
 </div>
 
 </body>
